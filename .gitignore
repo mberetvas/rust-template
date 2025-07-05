@@ -24,3 +24,6 @@ target
 # Added by cargo
 
 /target
+
+# Add extra files and directories that should be ignored
+/.history
