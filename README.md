@@ -1,2 +1,64 @@
 # rust-template
-This is a general rust template including basic setup and folder structure to use with vscode
+
+## Overview
+This is a general Rust template with a basic setup and folder structure, designed for use with VS Code. It provides a solid foundation for new Rust projects, supporting both binary and library crates, and includes best practices for development, testing, and CI/CD.
+
+## Features
+- Ready-to-use project structure
+- Supports both binary (`src/main.rs`) and library (`src/lib.rs`) crates
+- Example code and integration tests
+- Editor and formatting configuration
+- Linting with Clippy
+- GitHub Actions CI workflow
+- Easy customization for new projects
+
+## Getting Started
+1. **Clone the template:**
+   ```sh
+   git clone <this-repo-url> my-new-project
+   cd my-new-project
+   rm -rf .git
+   git init
+   ```
+2. **Update project metadata:**
+   - Edit `Cargo.toml` (name, authors, description, etc.)
+   - Update license if needed
+3. **Build and run:**
+   ```sh
+   cargo build
+   cargo run
+   ```
+4. **Test:**
+   ```sh
+   cargo test
+   ```
+
+
+## Customization
+- Add your code to `src/lib.rs` (library) or `src/main.rs` (binary)
+- Place integration tests in the `tests/` directory
+- Add examples to the `examples/` directory
+- Configure formatting in `rustfmt.toml` and linting in `clippy.toml`
+- Use the provided GitHub Actions workflow for CI
+- To rename the project, update the `Cargo.toml` name, authors, and description fields.
+- To change the license, update the `LICENSE` file and `Cargo.toml` license field.
+- To add features, use the `[features]` section in `Cargo.toml`.
+
+## Example Features
+- Error handling using `thiserror` (library) or `anyhow` (binary)
+- Logging with `log` and `env_logger`
+- Configuration with `config` crate
+- Feature flags in `Cargo.toml`
+
+See `src/lib.rs` and `examples/hello.rs` for code examples.
+
+## Development
+- Format code: `cargo fmt`
+- Lint code: `cargo clippy`
+- Run tests: `cargo test`
+
+## Contributing
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## License
+See [LICENSE](LICENSE) for details.
