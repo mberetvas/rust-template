@@ -80,6 +80,16 @@ fn main() -> Result<()> {
 - Include documentation for edge cases and the expected behavior in those cases.
 - Use documentation tests within `///` comments to provide examples that are verified at compile time.
 
+### Test File Location
+
+All integration test files should be placed in the `./tests` directory at the root of the project. This follows Rust's convention for integration tests. Each test file in this directory is compiled as a separate crate. Example:
+
+```
+./tests/my_integration_test.rs
+```
+
+Unit tests can still be placed in the same file as the code, inside a `#[cfg(test)]` module.
+
 ## Example of Proper Documentation
 
 ```rust
@@ -113,3 +123,31 @@ pub fn calculate_area(radius: f64) -> Result<f64, &'static str> {
     Ok(PI * radius.powi(2))
 }
 ```
+
+## Changelog Updates
+
+After making any change to the codebase, always update the `CHANGELOG.md` file to document what was changed. Use clear, concise language and group changes by type (e.g., Added, Changed, Fixed). Example:
+
+```
+### Added
+- New feature for X
+
+### Changed
+- Refactored Y for better performance
+
+### Fixed
+- Bug in Z
+```
+
+## Operating System Selection
+
+Specify your operating system below by uncommenting the appropriate line and commenting out the others. By default, Windows is enabled.
+
+```
+# Select your OS (uncomment one, comment the others):
+OS=windows
+# OS=linux
+# OS=mac
+```
+
+Only one OS should be uncommented at a time. This helps scripts and instructions adapt to your environment.
